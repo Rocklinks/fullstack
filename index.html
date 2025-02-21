@@ -1,30 +1,17 @@
-<!-- Stage- Bootstrap one page Event ticket booking theme 
-Created by pixpalette.com - online design magazine -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Fullstackdev course materials</title>
+    <title>Fullstackdev Course Materials</title>
 
-    <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-    
-    <!-- fonts -->
     <link href='http://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
   <body>
-  	
     <div class="loader">
        <div>
         <img src="images/icons/preloader.gif" />
@@ -32,104 +19,114 @@ Created by pixpalette.com - online design magazine -->
     </div>
     
     <div class="container-fluid">
-		<div class="row">
-        	<div class="col-sm-5 left-wrapper">
-            	<div class="event-banner-wrapper">
-                	<div class="logo">
-                <h1>Python Full Stack program <br> Mind2i, Aipoch Technologies Materials</h1>
-
-                    </div>
-                
-                	<h2><b>
-                    by Rocklin K S
-                    </h2>
-                </div>
+      <div class="row">
+        <div class="col-sm-5 left-wrapper">
+          <div class="event-banner-wrapper">
+            <div class="logo">
+              <h1>Python Full Stack Program <br> Mind2i, Aipoch Technologies Materials</h1>
             </div>
-            <div class="col-sm-7 right-wrapper">
-            	<div class="event-ticket-wrapper">
-                    
-                    <div class="event-tab">
-                
-                  <!-- Nav tabs -->
-                  <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#buyTicket" aria-controls="buyTicket" role="tab" data-toggle="tab">Course Materials</a></li>
-                
-                  </ul>
-                
-                  <!-- Tab panes -->
-<div class="tab-content">
-    <div role="tabpanel" class="tab-pane fade in active" id="buyTicket">
-        <div class="row">
-            <!-- Generate 20 days dynamically -->
-            <!-- Start loop -->
-            <!-- Each day will be in a col-md-6 div -->
-            <!-- Adjust row structure to fit 20 days -->
-            <!-- Example structure for 20 days -->
-            <!-- Loop Starts Here -->
-            
-            <!-- Day 1 to Day 20 -->
-            <!-- Dynamically generated content for each day -->
-            <!-- Each ticketBox represents a day's material -->
-            
-            <!-- Generate dynamically for 20 days -->
-            <!-- Each box follows the same structure -->
-            
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        let container = document.querySelector("#buyTicket .row");
-
-        // List of unique URLs for each day
-        let urls = [
-            "https://app.box.com/s/n4svhb6h715wu3ozuy99ujcl5wqxqjl2", // Day 1
-            "https://app.box.com/s/v7m5u4uxi94xndszlumn77qbbns4y081",      // Day 2
-            "https://app.box.com/s/oglbxl5m2ali3h3b30nznioa5mvc6yfe",             // Day 3
-            "https://app.box.com/s/7u8necjvp41o6u2trt4i579pozxmmltm", // Day 4
-            "https://app.box.com/s/aifblmjr8hmplwzaeavop5bnlxuhcukh",      // Day 5
-            "https://app.box.com/s/trkkxwlnmpbct3p98erk5sl5kealcq22",             // Day 6
-            "https://app.box.com/s/likjx0fcnnj9bu5nheg70rzv8gtleofr", // Day 7
-            "https://app.box.com/s/19mb2bwaqvxz64b5u9jpy858tqvxs5cv",      // Day 8
-            "https://app.box.com/s/k6a2l7qcsjzu34b5thv5wza9gge9kq1s",             // Day 9
-            "https://app.box.com/s/ryc08zpohbk06z1inyx8wdm3zsuaeeay", // Day 10
-            "https://app.box.com/s/mvxildupzxs3hpw2zgbs04ijnj2aur9p",      // Day 11
-            "https://app.box.com/s/ie71cto34pfk6vp09myvvxtb70jgwgzd",            // Day 12
-            "https://app.box.com/s/b6f2pyjyphuerv10fqorxhmoyegyf8gb", // Day 13
-            "https://app.box.com/s/si4o7a9gsizzxita65ohvi0u0vi7992c",      // Day 14
-            "https://app.box.com/s/lcmpj55fzieusasmjtq54h23su8k3ksn",            // Day 15
-            "https://app.box.com/s/jcjsj4jm7xo73tnjyt2kyb2h63m666ga", // Day 16
-            "https://app.box.com/s/vg6bw5yjd1pwefxsqgsa57ume1kx86fv",      // Day 17
-            "https://app.box.com/s/gu0ecxub88dsbjskorhf88m3k5zzr0k7",            // Day 18
-            "https://app.box.com/s/gsz22mnlkbsc4vsd4vn63kheas0qu6xv", // Day 19
-            "https://app.box.com/s/c9drwogo76nj7ix1ji20jqxajb0tflqt"       // Day 20
-        ];
-
-        for (let i = 1; i <= 20; i++) {
-            let ticketBox = document.createElement("div");
-            ticketBox.classList.add("col-md-6");
-            ticketBox.innerHTML = `
-                <div class="ticketBox">
-                    <div class="inactiveStatus"></div>
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <div class="ticket-name">
-                                Day ${i}
-                                <span>Day ${i} Materials</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ticket-description text-center">
-                        <button class="btn btn-primary btn-round" onclick="window.open('${urls[i-1]}', '_blank')">Save</button>
-                    </div>
+            <h2><b>by Rocklin K S</b></h2>
+          </div>
+        </div>
+        <div class="col-sm-7 right-wrapper">
+          <div class="event-ticket-wrapper">
+            <div class="event-tab">
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#python" aria-controls="python" role="tab" data-toggle="tab">Python</a></li>
+                <li role="presentation"><a href="#web" aria-controls="web" role="tab" data-toggle="tab">Web</a></li>
+              </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="python">
+                  <div class="row" id="python-materials"></div>
                 </div>
-            `;
-            container.appendChild(ticketBox);
-        }
-    });
-</script>
+                <div role="tabpanel" class="tab-pane fade" id="web">
+                  <div class="row" id="web-materials"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        let pythonContainer = document.querySelector("#python-materials");
+        let webContainer = document.querySelector("#web-materials");
+        
+        let pythonUrls = [
+          "https://app.box.com/s/n4svhb6h715wu3ozuy99ujcl5wqxqjl2", 
+          "https://app.box.com/s/v7m5u4uxi94xndszlumn77qbbns4y081", 
+          "https://app.box.com/s/oglbxl5m2ali3h3b30nznioa5mvc6yfe", 
+          "https://app.box.com/s/7u8necjvp41o6u2trt4i579pozxmmltm", 
+          "https://app.box.com/s/aifblmjr8hmplwzaeavop5bnlxuhcukh", 
+          "https://app.box.com/s/trkkxwlnmpbct3p98erk5sl5kealcq22", 
+          "https://app.box.com/s/likjx0fcnnj9bu5nheg70rzv8gtleofr", 
+          "https://app.box.com/s/19mb2bwaqvxz64b5u9jpy858tqvxs5cv", 
+          "https://app.box.com/s/k6a2l7qcsjzu34b5thv5wza9gge9kq1s", 
+          "https://app.box.com/s/ryc08zpohbk06z1inyx8wdm3zsuaeeay", 
+          "https://app.box.com/s/mvxildupzxs3hpw2zgbs04ijnj2aur9p", 
+          "https://app.box.com/s/ie71cto34pfk6vp09myvvxtb70jgwgzd", 
+          "https://app.box.com/s/b6f2pyjyphuerv10fqorxhmoyegyf8gb", 
+          "https://app.box.com/s/si4o7a9gsizzxita65ohvi0u0vi7992c", 
+          "https://app.box.com/s/lcmpj55fzieusasmjtq54h23su8k3ksn", 
+          "https://app.box.com/s/jcjsj4jm7xo73tnjyt2kyb2h63m666ga", 
+          "https://app.box.com/s/vg6bw5yjd1pwefxsqgsa57ume1kx86fv", 
+          "https://app.box.com/s/gu0ecxub88dsbjskorhf88m3k5zzr0k7", 
+          "https://app.box.com/s/gsz22mnlkbsc4vsd4vn63kheas0qu6xv", 
+          "https://app.box.com/s/c9drwogo76nj7ix1ji20jqxajb0tflqt" 
+        ];
+        
+        let webUrls = [
+          "https://app.box.com/s/6cf9cgbivdghysogyvzcguxzxgnd29dm"
+        ]; 
+        
+        for (let i = 1; i <= 20; i++) {
+          let pythonTicketBox = `
+            <div class="col-md-6">
+              <div class="ticketBox">
+                <div class="inactiveStatus"></div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="ticket-name">
+                      Day ${i}
+                      <span>Day ${i} Materials</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="ticket-description text-center">
+                  <button class="btn btn-primary btn-round" onclick="window.open('${pythonUrls[i-1]}', '_blank')">Save</button>
+                </div>
+              </div>
+            </div>`;
+          
+          let webTicketBox = `
+            <div class="col-md-6">
+              <div class="ticketBox">
+                <div class="inactiveStatus"></div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="ticket-name">
+                      Day ${i}
+                      <span>Day ${i} Materials</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="ticket-description text-center">
+                  <button class="btn btn-primary btn-round" onclick="window.open('${webUrls[i-1]}', '_blank')">Save</button>
+                </div>
+              </div>
+            </div>`;
+          
+          pythonContainer.innerHTML += pythonTicketBox;
+          webContainer.innerHTML += webTicketBox;
+        }
+      });
+    </script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/allscript.js"></script>
   </body>
 </html>
+

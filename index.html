@@ -49,91 +49,101 @@
       </div>
     </div>
     
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        let pythonContainer = document.querySelector("#python-materials");
-        let webContainer = document.querySelector("#web-materials");
-        
-        let pythonUrls = [
-          "https://app.box.com/s/n4svhb6h715wu3ozuy99ujcl5wqxqjl2", 
-          "https://app.box.com/s/v7m5u4uxi94xndszlumn77qbbns4y081", 
-          "https://app.box.com/s/oglbxl5m2ali3h3b30nznioa5mvc6yfe", 
-          "https://app.box.com/s/7u8necjvp41o6u2trt4i579pozxmmltm", 
-          "https://app.box.com/s/aifblmjr8hmplwzaeavop5bnlxuhcukh", 
-          "https://app.box.com/s/trkkxwlnmpbct3p98erk5sl5kealcq22", 
-          "https://app.box.com/s/likjx0fcnnj9bu5nheg70rzv8gtleofr", 
-          "https://app.box.com/s/19mb2bwaqvxz64b5u9jpy858tqvxs5cv", 
-          "https://app.box.com/s/k6a2l7qcsjzu34b5thv5wza9gge9kq1s", 
-          "https://app.box.com/s/ryc08zpohbk06z1inyx8wdm3zsuaeeay", 
-          "https://app.box.com/s/mvxildupzxs3hpw2zgbs04ijnj2aur9p", 
-          "https://app.box.com/s/ie71cto34pfk6vp09myvvxtb70jgwgzd", 
-          "https://app.box.com/s/b6f2pyjyphuerv10fqorxhmoyegyf8gb", 
-          "https://app.box.com/s/si4o7a9gsizzxita65ohvi0u0vi7992c", 
-          "https://app.box.com/s/lcmpj55fzieusasmjtq54h23su8k3ksn", 
-          "https://app.box.com/s/jcjsj4jm7xo73tnjyt2kyb2h63m666ga", 
-          "https://app.box.com/s/vg6bw5yjd1pwefxsqgsa57ume1kx86fv", 
-          "https://app.box.com/s/gu0ecxub88dsbjskorhf88m3k5zzr0k7", 
-          "https://app.box.com/s/gsz22mnlkbsc4vsd4vn63kheas0qu6xv", 
-          "https://app.box.com/s/c9drwogo76nj7ix1ji20jqxajb0tflqt" 
-        ];
-        
-        let webUrls = [
-          "https://app.box.com/s/6cf9cgbivdghysogyvzcguxzxgnd29dm",
-          "https://app.box.com/s/z8hr0h8l29ccpx6k5utexgb5qc0nf2jr",
-          "https://app.box.com/s/2gkecgk7478nfsk0on238f6oa2vsud02",
-          "https://app.box.com/s/lycwq1dfvxndezoypuekuha89ehs713n",
-          "https://app.box.com/s/9q73b7b3fz1ulno9g7owk27twrcdnpwa",
-          "https://app.box.com/s/sngmjbvh3ialpe6347xf2yhfome8dnif",
-          "https://app.box.com/s/r7almxgtqv0i7lh72ki2fuf3opnnxa4q",
-          "https://app.box.com/s/q4fr5d9pz8236jnjerkzz1kri1w41ty0",
-          "https://app.box.com/s/hxq5khs3jma89lf81jbh9u1hwe09b3qw",
-          "https://app.box.com/s/zzw5rsnjqp96214bedaz66qlhag1v3fj",
-          "https://app.box.com/s/1lbm5e4o046i67pztc36126thjec6pip",
-          "https://app.box.com/s/8ufp93ca8k6ef1l8q2epr1n4hzyvwid1"
-        ]; 
-        
-        for (let i = 1; i <= 20; i++) {
-          let pythonTicketBox = `
-            <div class="col-md-6">
-              <div class="ticketBox">
-                <div class="inactiveStatus"></div>
-                <div class="row">
-                  <div class="col-xs-6">
-                    <div class="ticket-name">
-                      Day ${i}
-                      <span>Day ${i} Materials</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="ticket-description text-center">
-                  <button class="btn btn-primary btn-round" onclick="window.open('${pythonUrls[i-1]}', '_blank')">Save</button>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let pythonContainer = document.querySelector("#python-materials");
+    let webContainer = document.querySelector("#web-materials");
+
+    let pythonUrls = [
+      "https://app.box.com/s/n4svhb6h715wu3ozuy99ujcl5wqxqjl2", 
+      "https://app.box.com/s/v7m5u4uxi94xndszlumn77qbbns4y081", 
+      "https://app.box.com/s/oglbxl5m2ali3h3b30nznioa5mvc6yfe", 
+      "https://app.box.com/s/7u8necjvp41o6u2trt4i579pozxmmltm", 
+      "https://app.box.com/s/aifblmjr8hmplwzaeavop5bnlxuhcukh", 
+      "https://app.box.com/s/trkkxwlnmpbct3p98erk5sl5kealcq22", 
+      "https://app.box.com/s/likjx0fcnnj9bu5nheg70rzv8gtleofr", 
+      "https://app.box.com/s/19mb2bwaqvxz64b5u9jpy858tqvxs5cv", 
+      "https://app.box.com/s/k6a2l7qcsjzu34b5thv5wza9gge9kq1s", 
+      "https://app.box.com/s/ryc08zpohbk06z1inyx8wdm3zsuaeeay", 
+      "https://app.box.com/s/mvxildupzxs3hpw2zgbs04ijnj2aur9p", 
+      "https://app.box.com/s/ie71cto34pfk6vp09myvvxtb70jgwgzd", 
+      "https://app.box.com/s/b6f2pyjyphuerv10fqorxhmoyegyf8gb", 
+      "https://app.box.com/s/si4o7a9gsizzxita65ohvi0u0vi7992c", 
+      "https://app.box.com/s/lcmpj55fzieusasmjtq54h23su8k3ksn", 
+      "https://app.box.com/s/jcjsj4jm7xo73tnjyt2kyb2h63m666ga", 
+      "https://app.box.com/s/vg6bw5yjd1pwefxsqgsa57ume1kx86fv", 
+      "https://app.box.com/s/gu0ecxub88dsbjskorhf88m3k5zzr0k7", 
+      "https://app.box.com/s/gsz22mnlkbsc4vsd4vn63kheas0qu6xv", 
+      "https://app.box.com/s/c9drwogo76nj7ix1ji20jqxajb0tflqt" 
+    ];
+
+    let webUrls = [
+      "https://app.box.com/s/6cf9cgbivdghysogyvzcguxzxgnd29dm",
+      "https://app.box.com/s/z8hr0h8l29ccpx6k5utexgb5qc0nf2jr",
+      "https://app.box.com/s/2gkecgk7478nfsk0on238f6oa2vsud02",
+      "https://app.box.com/s/lycwq1dfvxndezoypuekuha89ehs713n",
+      "https://app.box.com/s/9q73b7b3fz1ulno9g7owk27twrcdnpwa",
+      "https://app.box.com/s/sngmjbvh3ialpe6347xf2yhfome8dnif",
+      "https://app.box.com/s/r7almxgtqv0i7lh72ki2fuf3opnnxa4q",
+      "https://app.box.com/s/q4fr5d9pz8236jnjerkzz1kri1w41ty0",
+      "https://app.box.com/s/hxq5khs3jma89lf81jbh9u1hwe09b3qw",
+      "https://app.box.com/s/zzw5rsnjqp96214bedaz66qlhag1v3fj",
+      "https://app.box.com/s/1lbm5e4o046i67pztc36126thjec6pip",
+      "https://app.box.com/s/8ufp93ca8k6ef1l8q2epr1n4hzyvwid1",
+      "https://app.box.com/s/django-project-placeholder" // 🔥 Added Day 13 manually
+    ]; 
+
+    // 🔹 Loop for Python Materials
+    for (let i = 1; i <= 20; i++) {
+      let pythonTicketBox = `
+        <div class="col-md-6">
+          <div class="ticketBox">
+            <div class="inactiveStatus"></div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="ticket-name">
+                  Day ${i}
+                  <span>Day ${i} Materials</span>
                 </div>
               </div>
-            </div>`;
-          
-          let webTicketBox = `
-            <div class="col-md-6">
-              <div class="ticketBox">
-                <div class="inactiveStatus"></div>
-                <div class="row">
-                  <div class="col-xs-6">
-                    <div class="ticket-name">
-                      Day ${i}
-                      <span>Day ${i} Materials</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="ticket-description text-center">
-                  <button class="btn btn-primary btn-round" onclick="window.open('${webUrls[i-1]}', '_blank')">Save</button>
+            </div>
+            <div class="ticket-description text-center">
+              <button class="btn btn-primary btn-round" onclick="window.open('${pythonUrls[i-1]}', '_blank')">Save</button>
+            </div>
+          </div>
+        </div>`;
+      
+      pythonContainer.innerHTML += pythonTicketBox;
+    }
+
+    // 🔹 Separate Loop for Web Materials (Fixes Day 13 Issue)
+    for (let i = 1; i <= 13; i++) {
+      let webLabel = i === 13 ? "Django Project" : `Day ${i} Materials`;
+      let webUrl = webUrls[i - 1] || "#"; // 🔥 Fallback for missing URLs
+
+      let webTicketBox = `
+        <div class="col-md-6">
+          <div class="ticketBox">
+            <div class="inactiveStatus"></div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="ticket-name">
+                  Day ${i}
+                  <span>${webLabel}</span>
                 </div>
               </div>
-            </div>`;
-          
-          pythonContainer.innerHTML += pythonTicketBox;
-          webContainer.innerHTML += webTicketBox;
-        }
-      });
-    </script>
+            </div>
+            <div class="ticket-description text-center">
+              <button class="btn btn-primary btn-round" ${webUrl !== "#" ? `onclick="window.open('${webUrl}', '_blank')"` : "disabled"}>Save</button>
+            </div>
+          </div>
+        </div>`;
+      
+      webContainer.innerHTML += webTicketBox;
+    }
+  });
+</script>
+
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

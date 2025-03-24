@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fullstackdev Course Materials</title>
-
+    <link rel="icon" href="./images/icons/ico.ico" type="image/x-icon">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
   <body>
     <div class="loader">
@@ -34,8 +35,10 @@
               <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#python" aria-controls="python" role="tab" data-toggle="tab">Python</a></li>
                 <li role="presentation"><a href="#web" aria-controls="web" role="tab" data-toggle="tab">Web</a></li>
+                <li role="presentation"><a href="#projects" aria-controls="projects" role="tab" data-toggle="tab">Projects</a></li>
                 <li role="presentation">
-    <a href="https://app.box.com/s/mzbqfwix8wcegz9thh6ro1yfa180jg11" target="_blank" style="text-decoration: none; padding: 8px 15px; background-color: #007bff; color: white; border-radius: 5px; font-weight: bold;">HW Materials</a></li>
+                  <a href="https://app.box.com/s/mzbqfwix8wcegz9thh6ro1yfa180jg11" target="_blank" style="text-decoration: none; padding: 8px 15px; background-color: #007bff; color: white; border-radius: 5px; font-weight: bold;">HW Materials</a>
+                </li>
               </ul>
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="python">
@@ -43,6 +46,9 @@
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="web">
                   <div class="row" id="web-materials"></div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="projects">
+                  <div class="row" id="projects-materials"></div>
                 </div>
               </div>
             </div>
@@ -94,9 +100,14 @@
       "https://app.box.com/s/1lbm5e4o046i67pztc36126thjec6pip",
       "https://app.box.com/s/8ufp93ca8k6ef1l8q2epr1n4hzyvwid1",
       "https://app.box.com/s/eqb0bhpdxtj8ibfzlazwhnrq0lrk2xop" 
+    ];
+
+    let projUrls = [
+      "https://app.box.com/s/dj7ikrn2uiawbw91cts37ajh5qa60kmq",
+      "https://app.box.com/s/bk20x1c0vo9qw9kxmq5gew21yg1pf57m"
     ]; 
 
-    // 🔹 Loop for Python Materials
+
     for (let i = 1; i <= 20; i++) {
       let pythonTicketBox = `
         <div class="col-md-6">
@@ -119,10 +130,9 @@
       pythonContainer.innerHTML += pythonTicketBox;
     }
 
-    // 🔹 Separate Loop for Web Materials (Fixes Day 13 Issue)
     for (let i = 1; i <= 13; i++) {
       let webLabel = i === 13 ? "Django Project" : `Day ${i} Materials`;
-      let webUrl = webUrls[i - 1] || "#"; // 🔥 Fallback for missing URLs
+      let webUrl = webUrls[i - 1] || "#";
 
       let webTicketBox = `
         <div class="col-md-6">
@@ -144,8 +154,35 @@
       
       webContainer.innerHTML += webTicketBox;
     }
-  });
+    for (let i = 1; i <= 2; i++) {
+        let projLabel = i === 2 ? "Python Project" : "Python Full Stack Project";
+        let projUrl = projUrls[i - 1] || "#";
+
+        let projTicketBox = `
+        <div class="col-md-6">
+          <div class="ticketBox">
+            <div class="inactiveStatus"></div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="ticket-name">
+                  ${projLabel}
+                  <span>${projLabel}</span>
+                </div>
+              </div>
+            </div>
+            <div class="ticket-description text-center">
+              <button class="btn btn-primary btn-round" ${projUrl !== "#" ? `onclick="window.open('${projUrl}', '_blank')"` : "disabled"}>Save</button>
+            </div>
+          </div>
+        </div>`;
+      
+        projectsContainer.innerHTML += projTicketBox;
+    }
+     console.log("Contens loaded successfully")
+});
+
 </script>
+
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

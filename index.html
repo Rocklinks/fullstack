@@ -104,7 +104,9 @@
 
     let projUrls = [
       "https://app.box.com/s/dj7ikrn2uiawbw91cts37ajh5qa60kmq",
-      "https://app.box.com/s/bk20x1c0vo9qw9kxmq5gew21yg1pf57m"
+      "https://app.box.com/s/bk20x1c0vo9qw9kxmq5gew21yg1pf57m",
+      "https://app.box.com/s/xo2oiewkrc1l9fgobkxh7zixfmrwbn5n",
+      "https://app.box.com/s/ftxvs46efn8rqaqotfxwz0kms86rau01",
     ]; 
 
 
@@ -154,8 +156,22 @@
       
       webContainer.innerHTML += webTicketBox;
     }
-    for (let i = 1; i <= 2; i++) {
-        let projLabel = i === 2 ? "Python Project" : "Python Full Stack Project";
+    for (let i = 1; i <= 4; i++) {
+        let projLabel;
+        switch (i) {
+            case 1:
+                projLabel = "Python Full Stack Project";
+                break;
+            case 2:
+                projLabel = "Python Project";
+                break;
+            case 3:
+                projLabel = "Placement Cheatsheet";
+                break;
+            case 4:
+                projLabel = "Coding Cheatsheet";
+                break;
+    }
         let projUrl = projUrls[i - 1] || "#";
 
         let projTicketBox = `
